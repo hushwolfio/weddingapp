@@ -1,21 +1,21 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route } from "react-router-dom";
+import NavBar from "./Navigation/NavBar";
+import HomeView from "./views/home/HomeView";
+import AboutView from "./views/about/AboutView";
+import ProgressView from "./views/progress/ProgressView";
+import ProposalView from "./views/proposal/ProposalView";
+import PhotosView from "./views/photos/PhotosView";
+import Footer from "./Footer/Footer";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
-
+const App = () =>
+  <div>
+    <NavBar />
+    <HomeView />
+    <Route path="/about" component={AboutView} />
+    <Route path="/progress" component={ProgressView} />
+    <Route path="/proposal" component={ProposalView} />
+    <Route path="/photos" component={PhotosView} />
+    <Footer />
+  </div>;
 export default App;

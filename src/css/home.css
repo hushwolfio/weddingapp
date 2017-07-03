@@ -1,0 +1,20 @@
+body {
+  margin-top: 25px;
+  text-align: center;
+  background-color: black;
+  height: auto;
+  font-family: garamond;
+}
+
+.Home {
+  background-color: silver;
+  color: mediumorchid;
+  height: 100vh;
+  font-family: garamond;
+  max-width: 1076px;
+  text-align: center;
+}
+
+.container {
+  text-align: center;
+}
